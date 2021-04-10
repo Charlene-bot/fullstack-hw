@@ -3,3 +3,37 @@
 a {
   color: var(--teal);
 }
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  border: 2px solid grey;
+  border-radius: 10px 10px;
+  margin-right: 5%;
+}
+
+img {
+  width: 23vw;
+  height: auto;
+}
+
+.row {
+  margin: 0 -5px;
+  border: 2px solid grey;
+}
+
+/*Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
