@@ -11,7 +11,8 @@ body {
 }
 
 h2 {
-  color: var(--teal);
+  color: var(--lightteal);
+  text-align: center;
 }
 form {
   margin: 0 auto;
@@ -22,7 +23,7 @@ form {
 }
 
 .required {
-  color: var(--teal);
+  color: var(--lightteal);
 }
 
 .inputinfo {
@@ -42,4 +43,9 @@ input[type="submit"] {
 
 .button {
   background-color: var(--teal);
+  color: var(--white);
+}
+.card {
+  border-radius: 5px;
+  padding: 20px;
 }
