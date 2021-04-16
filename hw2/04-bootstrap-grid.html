@@ -12,11 +12,45 @@
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="hw-styles.css" />
     <title>Bootstrap Grid Exercise</title>
+    <style>
+      .row > * {
+        height: 100px; 
+        border: 1px solid white; 
+  
+      }
+    </style>
   </head>
   <body>
     <main>
       <h1>04 - Bootstrap Grid</h1>
       <!-- Add your code here -->
+      <div class="container">
+        <div class="row" id="row1">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row"id="row2">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row" id="row3">
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row" id="row4">
+          <div class="col-8 col-md-4 col-lg-6" id ="box1"></div>
+          <div class="col-4 col-md-8 col-lg-6" id ="box2"></div>
+        </div>
+        <div class="row" id="row5">
+          <div class="col"></div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

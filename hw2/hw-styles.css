@@ -4,11 +4,63 @@ h1 {
 }
 
 /* Code for exercise 01-flex */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+/*Code for exercise 02-flex*/
 
-/* Code for exercise 02-flex */
+.flex-container-columns {
+  display: flex;
+  flex-flow: column-reverse wrap-reverse;
+  align-items: center;
+  height: 300px;
+}
 
+.flex-container-columns > .flex-item1 {
+  order: 2;
+}
 /* Code for exercise 03-grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20vh 20vh 20vh 20vh;
+  gap: 2px;
+}
 
+.grid-container > .grid-item5 {
+  order: -1;
+  grid-column: span 3;
+  grid-row: span 2; 
+}
+
+.grid-container > .grid-item7 {
+  grid-column: span 4; 
+}
+
+.grid-container > .grid-item9 {
+  grid-column: span 3;
+}
 /* Code for exercise 04-bootstrap-grid */
+.container > #row1 > * {
+  background-color: var(--navy);
+}
+.container > #row2 > * {
+  background-color: var(--purple);
+}
+.container > #row3 > * {
+  background-color: var(--violetred);
+}
+.container > #row4 > * {
+  background-color: var(--teal);
+}
 
-/* Code for exercise 05-bootstrap-form */
+.container > #row4 > #box2 {
+  background-color: var(--red);
+}
+.container > #row5 > * {
+  background-color: var(--green);
+} 
+/* Code for exercise 05-bootstrap-form *
