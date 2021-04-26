@@ -1,13 +1,4 @@
-// Add your code here
-/*function checkEmail(email) {
-    var expression = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-    if (expression.test(email)) {
-        return true;
-    }
-    else {
-        return false;
-    }
-}*/
+
 function emailcheck() {
     let email = document.getElementById('input').value;
     let output = document.getElementById('message');

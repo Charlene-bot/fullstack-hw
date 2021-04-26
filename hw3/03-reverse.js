@@ -4,8 +4,6 @@ document.querySelector('#reverse').onclick = function () {
   let message = document.getElementById('message');
 
   message.textContent = '';
-  //message.className = 'font-weight-bold form-group';
-  
   let savedInfo = inputInfo.value
 
   if (savedInfo.length != 8) {

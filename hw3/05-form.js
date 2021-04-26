@@ -1,7 +1,5 @@
 //function handleSubmit(event) {
   // Add your code here
-
-
   let form = document.querySelector("form");
 
 
@@ -23,4 +21,3 @@
     }
     console.groupEnd();
   });
-
