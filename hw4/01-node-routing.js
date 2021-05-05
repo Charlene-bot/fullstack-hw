@@ -42,8 +42,46 @@ const server = http.createServer((req, res) => {
     res.write(`<ul> ${routeResults} </ul>`);
     res.end();
   }
-
-  // Add your code here
+  else if (req.url === '/welcome') {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write('<h1> Welcome to The Exercise 1 Welcome Page</h1>');
+    res.end(); 
+  }
+  else if (req.url === '/redirect') {
+    res.writeHead(302, { Location: '/redirected' });
+    res.end()
+  }
+  else if (req.url === '/redirected') {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write('<h1> You were bamboozled to this Page</h1>');
+    res.end(); 
+  }
+  else if (req.url === '/cache') {
+    res.setHeader('Cache-control', 'max-age = 86400');
+    res.write('<h1> This page has been cached</h1>');
+    res.end();
+  }
+  else if (req.url === '/cookie') {
+    res.setHeader('Set-Cookie', 'hello=world');
+    res.write('Cookies....yummmm');
+    res.end(); 
+  }
+  else if (req.url === '/check-cookies') {
+    res.writeHead(200, { 'Content-Type': 'text' });
+    if (req.headers.cookie === 'hello=world') {
+      result = 'YES';
+    }
+    else
+      result = 'NO';
+    res.write('Cookies present');
+    res.end(); 
+  }
+  else {
+    res.writeHead(404, { 'Content-Type': 'html' });
+    res.write('<h1>404- Page Not Found</h1>');
+    res.end();
+  }
+    
 });
 
 server.listen(port, () => {
