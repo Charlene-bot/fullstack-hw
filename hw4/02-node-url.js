@@ -31,12 +31,17 @@ const server = http.createServer((req, res) => {
 
     res.write(`<ul> ${routeResults} </ul>`);
   }
-
-  // Add your code here
-
-  res.end();
-});
-
-server.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
+  else {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    const parseUrl = new URL(url.href);
+    res.write(`<table style = "border: 1px solid black">`)
+    parseUrl.searchParams.forEach(function (value, key) {
+      res.write(`<tr><td style = "border: 1px solid black">${key}</td><td style = "border: 1px solid black">${value}</td></tr>`);
+    });
+      res.write(`</table>`)
+    res.end();
+  }
+  });
+  server.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+  });
