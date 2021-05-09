@@ -36,10 +36,16 @@ The exercises in this assignment are:
 The exercises in this assignment are:
 
 1. Node routing exercise
+    How to run this code: $node 01-node-routing.js
 2. URL parsing exercise
+    How to run this code: $node 02-node-url.js
 3. Express routing exercise
+    How to run this code: $node 03-expres.routing.js 
 4. Form submission exercise
+    How to run this code: $node 04-form.js 
 5. Express session exercise
+    How to run this code: $npx nodemon 05-sessions.js 
 6. Templates exercise
+    How to run this code: $npx nodemon 06-templates.js
 
 ## Homework 5 - Frameworks
